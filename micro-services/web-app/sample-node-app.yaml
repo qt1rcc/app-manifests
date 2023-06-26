@@ -1,0 +1,13 @@
+project: default
+source:
+  repoURL: 'https://qt1rcc.github.io/helm-charts'
+  targetRevision: 0.1.*
+  helm:
+    valueFiles:
+      - values.yaml
+  chart: sample-node-app
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: demo-env
+syncPolicy:
+  automated: {}
